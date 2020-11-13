@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutToolStripMenuItem" xml:space="preserve">
+    <value>About</value>
+    <comment>main form</comment>
+  </data>
+  <data name="alreadyExistsOnGoogleDrive" xml:space="preserve">
+    <value>already exists on Google Drive</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="applicationInformationToolStripMenuItem" xml:space="preserve">
+    <value>Application Information</value>
+    <comment>main form</comment>
+  </data>
+  <data name="areYouSure" xml:space="preserve">
+    <value>Are you sure you want to delete</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="autoDL" xml:space="preserve">
+    <value>Auto back up game save after you close the game</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="autoRestore" xml:space="preserve">
+    <value>Auto download and restore on game start</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="autoUpload" xml:space="preserve">
+    <value>Auto uploading</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="createdBy" xml:space="preserve">
+    <value>Created by</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="creatingSaveFolder" xml:space="preserve">
+    <value>Creating backup save folder for</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="creatingZip" xml:space="preserve">
+    <value>Creating zip backup...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="currentlyBackedUp" xml:space="preserve">
+    <value>currently backed up</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="currentlyRunning" xml:space="preserve">
+    <value>currently running.</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="deletedFile" xml:space="preserve">
+    <value>Deleted Cloud file</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="deleteTitle" xml:space="preserve">
+    <value>Google Cloud Delete File</value>
+    <comment>messagebox title</comment>
+  </data>
+  <data name="detectedGame" xml:space="preserve">
+    <value>Detected supported game</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value>disabled</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="downloadBtn" xml:space="preserve">
+    <value>DOWNLOAD / RESTORE</value>
+    <comment>main form</comment>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>enabled</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="errorUploading" xml:space="preserve">
+    <value>ERROR: File did not upload!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="errServiceNull" xml:space="preserve">
+    <value>ERROR Service is null in checkCloudSaves</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="fileDoesntExist" xml:space="preserve">
+    <value>File does not exist</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="Form1" xml:space="preserve">
+    <value>Game Save Backup</value>
+    <comment>main form</comment>
+  </data>
+  <data name="fromCloud" xml:space="preserve">
+    <value>from Google Cloud?</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="fromGoogleCloud" xml:space="preserve">
+    <value>from Google Cloud...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="gameBackupMsg" xml:space="preserve">
+    <value>Game auto detection and backup</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="gameDetectMsg" xml:space="preserve">
+    <value>NOTE: If you do not see a game detected, it's because the XML data doesn't exist yet!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="gameRestored" xml:space="preserve">
+    <value>Game save restored from cloud, resuming game...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="gameSave" xml:space="preserve">
+    <value>game save.</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="getFolderID" xml:space="preserve">
+    <value>Getting cloud folder id...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="gettingProc" xml:space="preserve">
+    <value>Getting game process ID...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="googleDriveFolderListToolStripMenuItem" xml:space="preserve">
+    <value>Google Drive Folder List</value>
+    <comment>main form</comment>
+  </data>
+  <data name="googlesetup" xml:space="preserve">
+    <value>Now setting up initial GameBackup folder...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="installed" xml:space="preserve">
+    <value>installed on computer.</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="langLabel" xml:space="preserve">
+    <value>Language</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="locatingDir" xml:space="preserve">
+    <value>Locating game directory...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="miniStartup" xml:space="preserve">
+    <value>Minimize to system tray on startup</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="miniToTray" xml:space="preserve">
+    <value>Game Save Backup in System Tray</value>
+    <comment>tray message</comment>
+  </data>
+  <data name="missingFiles" xml:space="preserve">
+    <value>Missing some required save files for backup.</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="myDriveBackupsTitle" xml:space="preserve">
+    <value>My Google Drive Steam Save Backups</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="needToBackup" xml:space="preserve">
+    <value>has stopped running. Need to do a backup...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="onGoogleDrive" xml:space="preserve">
+    <value>on Google Drive</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="programmerToolStripMenuItem" xml:space="preserve">
+    <value>Programmer Information</value>
+    <comment>main form</comment>
+  </data>
+  <data name="purpose" xml:space="preserve">
+    <value>Created for Steam game save file backup and restore.</value>
+    <comment>messagebox text</comment>
+  </data>
+  <data name="regKeysRestored" xml:space="preserve">
+    <value>Registry keys restored!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="restartLabel" xml:space="preserve">
+    <value>Restart program if you change settings.</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="restoreRegKeys" xml:space="preserve">
+    <value>Restoring registry keys...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="restoring" xml:space="preserve">
+    <value>Restoring file/folder</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="restoringBackup" xml:space="preserve">
+    <value>Restoring backup</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Application Settings</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="settingsToolStripMenuItem" xml:space="preserve">
+    <value>Options</value>
+    <comment>main form</comment>
+  </data>
+  <data name="settingsToolStripMenuItem1" xml:space="preserve">
+    <value>Settings</value>
+    <comment>main form</comment>
+  </data>
+  <data name="steamLabel" xml:space="preserve">
+    <value>Steam Content Libraries</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="suspending" xml:space="preserve">
+    <value>Suspending game while we restore the newest cloud backup.</value>
+    <comment>tray and debug message</comment>
+  </data>
+  <data name="uploadBtn" xml:space="preserve">
+    <value>UPLOAD / BACKUP</value>
+    <comment>main form</comment>
+  </data>
+  <data name="uploadingZip" xml:space="preserve">
+    <value>Uploading zip backup...</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="upoadSuccess" xml:space="preserve">
+    <value>Upload successful with file ID</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="visitDrivegooglecomToolStripMenuItem" xml:space="preserve">
+    <value>Visit drive.google.com</value>
+    <comment>main form</comment>
+  </data>
+  <data name="visitNewagesoldiercomToolStripMenuItem" xml:space="preserve">
+    <value>Visit Website</value>
+    <comment>main form</comment>
+  </data>
+  <data name="welcomeMsg" xml:space="preserve">
+    <value>Welcome to GameSaveBackup using free cloud storage services!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="whenClosing" xml:space="preserve">
+    <value>When it closes, we will do a backup to your cloud storage automatically!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="winstartup" xml:space="preserve">
+    <value>Start program on Windows startup</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="mbLabel" xml:space="preserve">
+    <value>Max Backups</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="hitMax" xml:space="preserve">
+    <value>Hit max number of uploads, deleting</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="debugExport" xml:space="preserve">
+    <value>Export debug console data to file</value>
+    <comment>settings form</comment>
+  </data>
+  <data name="dlError" xml:space="preserve">
+    <value>ERROR: Cannot pull XML data from dropbox</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="xmlFatal" xml:space="preserve">
+    <value>ERROR: XML file missing and cannot download from DropBox!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="dlGOGXML" xml:space="preserve">
+    <value>Downloading new GOG XML data file</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="dlSteamXML" xml:space="preserve">
+    <value>Downloading new Steam XML data file</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="goodGOGXML" xml:space="preserve">
+    <value>Currently using the newest GOG XML data file.</value>
+  </data>
+  <data name="goodSteamXML" xml:space="preserve">
+    <value>Currently using the newest Steam XML data file.</value>
+  </data>
+  <data name="gDataLoadComplete" xml:space="preserve">
+    <value>Game data loading completed!</value>
+    <comment>debug message</comment>
+  </data>
+  <data name="loadingGamesWait" xml:space="preserve">
+    <value>Still loading game data, please wait...</value>
+    <comment>message box for main form</comment>
+  </data>
+  <data name="getMoveDirComplete" xml:space="preserve">
+    <value>Game data loading completed!</value>
+    <comment>for cloud source local, get files complete</comment>
+  </data>
+  <data name="noGOGGames" xml:space="preserve">
+    <value>WARNING: No GOG game directories given. Open settings and add some.</value>
+    <comment>No gog games directory given</comment>
+  </data>
+</root>
