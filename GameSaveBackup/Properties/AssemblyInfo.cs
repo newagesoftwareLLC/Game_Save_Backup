@@ -7,12 +7,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Game Save Backup")]
-[assembly: AssemblyDescription("Game save syncing by cloud services")]
+[assembly: AssemblyDescription("Game save syncing by cloud services.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("https://newage.software")]
+[assembly: AssemblyCompany("https://nas.llc")]
 [assembly: AssemblyProduct("Game Save Backup")]
-[assembly: AssemblyCopyright("Copyright ©  2018 New Age Software, LLC")]
-[assembly: AssemblyTrademark("New Age Software, LLC")]
+[assembly: AssemblyCopyright("Copyright ©  2021 New Age Software LLC")]
+[assembly: AssemblyTrademark("New Age Software LLC")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
