@@ -1944,7 +1944,7 @@ namespace GameSaveBackup
 
         private void programmerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(rm.GetString("createdBy") + " New Age Software LLC. https://newage.software", "Application Information", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+            MessageBox.Show(rm.GetString("createdBy") + " New Age Software LLC. https://nas.llc", "Application Information", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
         }
 
         private void applicationInformationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1955,7 +1955,7 @@ namespace GameSaveBackup
 
         private void visitNewagesoldiercomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://newage.software");
+            System.Diagnostics.Process.Start("https://nas.llc");
         }
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -2136,7 +2136,7 @@ namespace GameSaveBackup
 
             string steamPath = getSteamInstallPath();
             if (String.IsNullOrEmpty(steamPath))
-                AppendOutputText("WARNING: Steam not installed. - https://store.steampowered.com/about", Color.Yellow);
+                AppendOutputText("WARNING: Steam not installed.", Color.Yellow);
             else
             {
                 AppendOutputText("Steam is installed.", Color.LimeGreen);

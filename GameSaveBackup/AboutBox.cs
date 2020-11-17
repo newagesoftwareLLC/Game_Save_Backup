@@ -136,7 +136,7 @@ namespace GameSaveBackup
 
         private void labelCompanyName_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://newage.software");
+            System.Diagnostics.Process.Start("https://nas.llc");
         }
     }
 }
