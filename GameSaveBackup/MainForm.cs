@@ -207,23 +207,15 @@ namespace GameSaveBackup
             wresp = null;
             try
             {
-                try
-                {
-                    wreq = (HttpWebRequest)WebRequest.Create(url);
-                    wreq.AllowWriteStreamBuffering = true;
-                    wresp = (HttpWebResponse)wreq.GetResponse();
-                    if ((mystream = wresp.GetResponseStream()) != null)
-                        bmp = new Bitmap(mystream);
-                }
-                catch {
-                    Assembly assembly = Assembly.GetExecutingAssembly();
-                    string resourceName = FormatResourceName(assembly, "header.jpg");
-                    using (Stream BitmapStream = assembly.GetManifestResourceStream(resourceName))
-                    {
-                        System.Drawing.Image img = System.Drawing.Image.FromStream(BitmapStream);
-                        bmp = new Bitmap(img);
-                    }
-                }
+                wreq = (HttpWebRequest)WebRequest.Create(url);
+                wreq.AllowWriteStreamBuffering = true;
+                wresp = (HttpWebResponse)wreq.GetResponse();
+                if ((mystream = wresp.GetResponseStream()) != null)
+                    bmp = new Bitmap(mystream);
+            }
+            catch
+            {
+                bmp = new Bitmap(Properties.Resources.header);
             }
             finally
             {
@@ -401,6 +393,11 @@ namespace GameSaveBackup
         string procName;
         public void checkLocalGames()
         {
+            if (xmlFile.Length <= 0)
+            {
+                MessageBox.Show("ERROR: XML file is 0 bytes!");
+                return;
+            }
             //parse the Steam XML file
             XmlTextReader reader = new XmlTextReader(xmlFile);
             if (reader.IsStartElement())
@@ -461,7 +458,12 @@ namespace GameSaveBackup
                                 lst.Text = gameDir2;
                                 lst.Name = "steam";
                                 lst.ImageIndex = globalCount;
-                                localGameList.Invoke(new MethodInvoker(delegate { imageList1.Images.Add(LoadPicture("http://cdn.akamai.steamstatic.com/steam/apps/" + appID + "/header.jpg")); localGameList.Items.Add(lst); }));
+                                localGameList.Invoke(new MethodInvoker(delegate {
+                                    string url = "http://cdn.akamai.steamstatic.com/steam/apps/" + appID + "/header.jpg";
+                                    Bitmap bmp = LoadPicture(url);
+                                    imageList1.Images.Add(bmp);
+                                    localGameList.Items.Add(lst); 
+                                }));
                                 globalCount++;
                             }
                             sp2 = "";
@@ -2663,6 +2665,11 @@ namespace GameSaveBackup
 
         private void closeButton_Click(object sender, EventArgs e)
         {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.Name.Equals("closeQuestion"))
+                    return;
+            }
             closeQuestion closebox = new closeQuestion();
             closebox.Show();
         }
@@ -2874,7 +2881,19 @@ namespace GameSaveBackup
                 var xmlURLVer = xml.DocumentElement.SelectSingleNode("/backups/date").InnerText;
 
                 var xml2 = new XmlDocument();
-                xml2.LoadXml(System.IO.File.ReadAllText(GOGxmlFile));
+                if (new FileInfo(GOGxmlFile).Length <= 0)
+                {
+                    MessageBox.Show("XML file " + GOGxmlFile + " is 0 bytes! Delete the file and re-open GameSaveBackup.", "XML Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try
+                {
+                    xml2.LoadXml(System.IO.File.ReadAllText(GOGxmlFile));
+                } catch
+                {
+                    MessageBox.Show("XML file " + GOGxmlFile + " is formatted incorrectly! Delete the file and re-open GameSaveBackup.", "XML Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 var xmlFileVer = xml2.DocumentElement.SelectSingleNode("/backups/date").InnerText;
 
                 if (!xmlURLVer.Equals(xmlFileVer))
@@ -2901,7 +2920,19 @@ namespace GameSaveBackup
                 var xmlURLVer = xml.DocumentElement.SelectSingleNode("/backups/date").InnerText;
 
                 var xml2 = new XmlDocument();
-                xml2.LoadXml(System.IO.File.ReadAllText(xmlFile));
+                if (new FileInfo(xmlFile).Length <= 0)
+                {
+                    MessageBox.Show("XML file " + xmlFile + " is 0 bytes! Delete the file and re-open GameSaveBackup.", "XML Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                try {
+                    xml2.LoadXml(System.IO.File.ReadAllText(xmlFile));
+                }
+                catch
+                {
+                    MessageBox.Show("XML file " + xmlFile + " is formatted incorrectly! Delete the file and re-open GameSaveBackup.", "XML Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 var xmlFileVer = xml2.DocumentElement.SelectSingleNode("/backups/date").InnerText;
 
                 if (!xmlURLVer.Equals(xmlFileVer))

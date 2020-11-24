@@ -340,6 +340,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cloud3.ico" />
+    <None Include="Resources\header.jpg" />
     <Content Include="xml\Ionic.Zip.xml" />
   </ItemGroup>
   <ItemGroup>
