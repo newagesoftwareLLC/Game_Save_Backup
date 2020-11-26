@@ -9,7 +9,7 @@
   <Identity
     Name="8185NewAgeSoldier.GameSaveBackup"
     Publisher="CN=5385E736-2D32-4BDF-9858-0666D898071E"
-    Version="1.0.8.0" />
+    Version="1.0.12.0" />
 
   <Properties>
     <DisplayName>Game Save Backup</DisplayName>

@@ -2155,10 +2155,16 @@ namespace GameSaveBackup
                     Debug.WriteLine("Steam config.vdf was not readable at this moment.");
                 }
 
-                foreach (string line2 in WriteSafeReadAllLines(getSteamInstallPath() + @"\logs\connection_log.txt"))
+                try
                 {
-                    if (line2.Contains("SetSteamID") && !line2.Contains("SetSteamID( [U:1:0] )"))
-                        steamID = getVal2(line2);
+                    foreach (string line2 in WriteSafeReadAllLines(getSteamInstallPath() + @"\logs\connection_log.txt"))
+                    {
+                        if (line2.Contains("SetSteamID") && !line2.Contains("SetSteamID( [U:1:0] )"))
+                            steamID = getVal2(line2);
+                    }
+                } catch
+                {
+                    Debug.WriteLine(getSteamInstallPath() + @"\logs\connection_log.txt" + " file is not readable or does not exist.");
                 }
                 //AppendOutputText("Your Steam ID is " + steamID);
             }

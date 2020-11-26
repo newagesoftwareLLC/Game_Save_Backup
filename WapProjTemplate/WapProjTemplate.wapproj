@@ -56,12 +56,12 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <EntryPointProjectUniqueName>..\GameSaveBackup\GameSaveBackup.csproj</EntryPointProjectUniqueName>
-    <PackageCertificateThumbprint>E2F7DE8036D5CF8DAA1ECCEB1D22B0EA92D4222B</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>CDB87E6B4EEFE7EE1DEBF0D3D0095212AE015F89</PackageCertificateThumbprint>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
     <AppInstallerUri>https://update.newagesoftware.net/GameSaveBackupUWP/</AppInstallerUri>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>

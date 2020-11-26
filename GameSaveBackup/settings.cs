@@ -92,13 +92,15 @@ namespace GameSaveBackup
             {
                 foreach (string i in Properties.Settings.Default.gogDirs)
                 {
-                    if (System.IO.Directory.Exists(i))
+                    if (Directory.Exists(i))
                         gogList.Items.Add(i);
                 }
             }
             
             if (steamReg != null)
             {
+                if (!Directory.Exists(steamReg.Replace(@"/", @"\") + @"\steamapps\common\"))
+                    return;
                 steamList.Items.Add(steamReg.Replace(@"/", @"\") + @"\steamapps\common\");
                 try {
                     foreach (string line in System.IO.File.ReadLines(steamReg + @"\config\config.vdf"))
@@ -224,7 +226,7 @@ namespace GameSaveBackup
             //key.SetValue("SteamCloudSave", "\"" + Application.ExecutablePath.ToString() + "\"");
             try
             {
-                string shortcutLocation = System.IO.Path.Combine(Environment.ExpandEnvironmentVariables(@"%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"), "GameSaveBackup" + ".lnk");
+                string shortcutLocation = Path.Combine(Environment.ExpandEnvironmentVariables(@"%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"), "GameSaveBackup" + ".lnk");
                 WshShell shell = new WshShell();
                 IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
 
