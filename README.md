@@ -2,6 +2,8 @@
 
 Used for Steam & GOG (individual exe installs) save file backup / restore with GoogleDrive, OneDrive, DropBox, FTP, local/remote directories.
 
+Check https://gamesavebackup.nas.llc for more information and screenshots.
+
 ## Features
 
 - Reads all Steam directories on your system
